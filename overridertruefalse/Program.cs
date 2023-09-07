@@ -1,4 +1,6 @@
-﻿namespace overridertruefalse
+﻿using overridertruefalse.Classes;
+
+namespace overridertruefalse
 {
     class MyArr
     {
@@ -26,30 +28,15 @@
         }
     }
 
-    class Program{
-        static void Main(string[] args)
-        {
-            MyArr arr1 = new MyArr(4, 5, 12);
-            MyArr arr2 = new MyArr(4, 5, 12);
-            if (arr1 == arr2)
-            {
-                Console.WriteLine("Объекты равны");
-            }
-            MyArr arr3 = new MyArr(4, 6, 12);
-            MyArr arr4 = new MyArr(4, 5, 12);
-            if (arr3 == arr4)
-            {
-                Console.WriteLine("Объекты равны");
-            }
-            else
-            {
-                Console.WriteLine("Объекты не равны");
-            }
+    public class Program
+    {
 
-            if (arr1)
-            {
-                Console.WriteLine("Элементы объекта положительны");
-            }
+        public static void Main(string[] args)
+        {
+            Player Alex = new Player();
+            Player Edvard = new Player("Edvard",DateTime.Now, "Eduard");
+            Player goodboy2004 = new Player("GoodBoy2004_zxc","qwertyQWERTY",DateTime.Now, "Maxim"); 
+            goodboy2004.ShowInfo("qwertyQWERTY");
         }
     }
 }
